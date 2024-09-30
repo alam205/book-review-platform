@@ -1,63 +1,6 @@
 # book-review-platform
 This is a book review platform where users can browse books, read and write reviews, and rate books.
 
-Here’s the file structure of your book review platform and a manual for running the project:
-
-File Structure:
-
-Frontend:
-
-frontend/
-│
-├── app.js
-├── book-review-frontend/
-├── build/
-├── public/
-│   ├── index.html
-│   └── ... (static assets)
-├── src/
-│   ├── api/         # API calls to backend
-│   ├── components/  # Reusable components (e.g., header, footer, buttons)
-│   ├── context/     # React context for global state management
-│   ├── pages/       # Pages for routing (e.g., Home, Book, Profile)
-│   ├── store/       # Redux or React Context Store for state management
-│   ├── App.js       # Main React component
-│   ├── App.css      # App-specific styles
-│   ├── index.js     # Entry point for rendering the app
-│   ├── index.css    # Global styles
-│   └── styles.css   # Additional CSS styles
-├── package.json     # Project dependencies
-├── package-lock.json
-└── server.js        # Server (if needed for SSR or API proxy)
-
-
-Backend:
-
-backend/
-│
-├── .env              # Environment variables (DB_URI, PORT, etc.)
-├── app.js            # Main app entry point
-├── config/           # Configurations (e.g., DB connection setup)
-├── controllers/      # Logic to handle the requests for books, users, reviews
-│   ├── bookController.js
-│   ├── reviewController.js
-│   └── userController.js
-├── database/         # Database connection logic (SQL or MongoDB)
-│   └── dbConnection.js
-├── middlewares/      # Middleware for error handling, auth, etc.
-├── models/           # Database models/schemas for books, reviews, users
-│   ├── bookModel.js
-│   ├── reviewModel.js
-│   └── userModel.js
-├── routes/           # API route definitions
-│   ├── bookRoutes.js
-│   ├── reviewRoutes.js
-│   └── userRoutes.js
-├── server.js         # Node.js server entry point
-├── package.json      # Backend dependencies
-└── package-lock.json
-
-
 Manual to Run the Project:
 Prerequisites:
 Node.js and npm (ensure both are installed)
@@ -122,3 +65,61 @@ Backend: The API should be running at http://localhost:5000.
 Notes:
 Frontend-Backend Integration: The frontend interacts with the backend using Axios or fetch to make API calls. Ensure the API endpoints in the frontend are correctly configured to point to the backend (http://localhost:5000 if running locally).
 State Management: If using Redux or Context API for global state management, ensure that the store is properly set up and integrated with the components.
+
+
+Here’s the file structure of your book review platform.
+
+File Structure:
+
+Frontend:
+
+frontend/
+│
+├── app.js
+├── book-review-frontend/
+├── build/
+├── public/
+│   ├── index.html
+│   └── ... (static assets)
+├── src/
+│   ├── api/         # API calls to backend
+│   ├── components/  # Reusable components (e.g., header, footer, buttons)
+│   ├── context/     # React context for global state management
+│   ├── pages/       # Pages for routing (e.g., Home, Book, Profile)
+│   ├── store/       # Redux or React Context Store for state management
+│   ├── App.js       # Main React component
+│   ├── App.css      # App-specific styles
+│   ├── index.js     # Entry point for rendering the app
+│   ├── index.css    # Global styles
+│   └── styles.css   # Additional CSS styles
+├── package.json     # Project dependencies
+├── package-lock.json
+└── server.js        # Server (if needed for SSR or API proxy)
+
+
+Backend:
+
+backend/
+│
+├── .env              # Environment variables (DB_URI, PORT, etc.)
+├── app.js            # Main app entry point
+├── config/           # Configurations (e.g., DB connection setup)
+├── controllers/      # Logic to handle the requests for books, users, reviews
+│   ├── bookController.js
+│   ├── reviewController.js
+│   └── userController.js
+├── database/         # Database connection logic (SQL or MongoDB)
+│   └── dbConnection.js
+├── middlewares/      # Middleware for error handling, auth, etc.
+├── models/           # Database models/schemas for books, reviews, users
+│   ├── bookModel.js
+│   ├── reviewModel.js
+│   └── userModel.js
+├── routes/           # API route definitions
+│   ├── bookRoutes.js
+│   ├── reviewRoutes.js
+│   └── userRoutes.js
+├── server.js         # Node.js server entry point
+├── package.json      # Backend dependencies
+└── package-lock.json
+
